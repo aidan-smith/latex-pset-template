@@ -85,6 +85,11 @@
     \vspace{0.75em}
 }
 
+% Induction Macros
+
+\newcommand{\bc}{\textit{Base Case:}}
+\newcommand{\is}{\textit{Inductive Step:}}
+
 % Math Macros
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[problem]
