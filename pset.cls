@@ -87,8 +87,8 @@
 
 % Induction Macros
 
-\newcommand{\bc}{\textit{Base Case:}}
-\newcommand{\is}{\textit{Inductive Step:}}
+\newcommand{\bc}[1]{\textit{Base Case ($#1$):}}
+\newcommand{\is}{\textit{Inductive Step: }}
 
 % Math Macros
 \theoremstyle{plain}
