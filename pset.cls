@@ -21,6 +21,7 @@
 \RequirePackage{enumerate}
 
 \RequirePackage{ifthen}
+\RequirePackage{suffix}
 
 % Information
 \newcommand{\name}{Aidan Smith}
@@ -60,10 +61,25 @@
 % Problem Header
 \newcounter{problem}
 
-\newcommand{\problem}[1]{%
+\providecommand{\problem}{}
+\renewcommand{\problem}[0]{%
     \stepcounter{problem}
-    \ifthenelse{\@opnewpage=1 \AND \not \value{problem}=1}{\clearpage}{}
-    \noindent{\textbf{Problem~\arabic{problem}.} #1}
+    \ifthenelse{\value{problem}=1}{}{%
+        \ifthenelse{\@opnewpage=1}{\clearpage}{\vspace{1em}}
+    }
+    \noindent{\textbf{Problem~\arabic{problem}.}}
+    \vspace{0.5em}
+    \hrule
+    \vspace{0.75em}
+}
+
+\WithSuffix\providecommand\problem*{}
+\WithSuffix\renewcommand\problem*[1]{%
+    \stepcounter{problem}
+    \ifthenelse{\value{problem}=1}{}{%
+        \ifthenelse{\@opnewpage=1}{\clearpage}{\vspace{1em}}
+    }
+    \noindent{\textbf{\arabic{problem}. #1}}
     \vspace{0.5em}
     \hrule
     \vspace{0.75em}
@@ -87,6 +103,7 @@
 \newcommand{\F}{\mathbb{F}}
 
 \newcommand{\J}{\mathcal{J}}
+\newcommand{\G}{\mathcal{G}}
 
 \newcommand{\ba}{\mathbf{a}}
 \newcommand{\bb}{\mathbf{b}}
