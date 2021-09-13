@@ -16,6 +16,7 @@
 
 \RequirePackage{listings}
 \RequirePackage{xcolor}
+\RequirePackage{graphicx}
 
 \RequirePackage{fancyhdr}
 \RequirePackage{enumerate}
@@ -60,10 +61,12 @@
 
 % Problem Header
 \newcounter{problem}
+\newcounter{partcount}
 
 \providecommand{\problem}{}
 \renewcommand{\problem}[0]{%
     \stepcounter{problem}
+    \setcounter{partcount}{0}
     \ifthenelse{\value{problem}=1}{}{%
         \ifthenelse{\@opnewpage=1}{\clearpage}{\vspace{1em}}
     }
@@ -76,6 +79,7 @@
 \WithSuffix\providecommand\problem*{}
 \WithSuffix\renewcommand\problem*[1]{%
     \stepcounter{problem}
+    \setcounter{partcount}{0}
     \ifthenelse{\value{problem}=1}{}{%
         \ifthenelse{\@opnewpage=1}{\clearpage}{\vspace{1em}}
     }
@@ -85,10 +89,22 @@
     \vspace{0.75em}
 }
 
-% Induction Macros
+\providecommand{\part}{}
+\renewcommand{\part}{%
+    \stepcounter{partcount}
+    \textbf{\arabic{problem}.\arabic{partcount}}
+}
 
-\newcommand{\bc}[1]{\textit{Base Case ($#1$):}}
+% Induction Macros
+\newcounter{case}
+\AtBeginEnvironment{proof}{\setcounter{case}{0}}
+
+\newcommand{\bcs}[1]{\textit{Base Case ($#1$):}}
 \newcommand{\is}{\textit{Inductive Step: }}
+\newcommand{\case}{%
+    \stepcounter{case}
+    \textbf{Case \arabic{case}.}
+}
 
 % Math Macros
 \theoremstyle{plain}
@@ -106,12 +122,14 @@
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\F}{\mathbb{F}}
+\newcommand{\C}{\mathbb{C}}
 
 \newcommand{\J}{\mathcal{J}}
 \newcommand{\G}{\mathcal{G}}
 
 \newcommand{\ba}{\mathbf{a}}
 \newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
 \newcommand{\be}{\mathbf{e}}
 \newcommand{\bu}{\mathbf{u}}
 \newcommand{\bv}{\mathbf{v}}
