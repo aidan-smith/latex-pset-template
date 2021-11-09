@@ -14,7 +14,18 @@
 \RequirePackage{amsthm}
 \RequirePackage{mathtools}
 
+\RequirePackage{algorithm}
+\RequirePackage[noend]{algpseudocode}
+
 \RequirePackage{listings}
+\lstset{
+    basicstyle=\ttfamily,
+    frame=lines,
+    numbers=left,
+    numberstyle=\tiny,
+    mathescape = true,
+}
+
 \RequirePackage{xcolor}
 \RequirePackage{graphicx}
 
@@ -116,6 +127,8 @@
 
 \newcommand{\abs}[1]{\lvert #1 \rvert}
 \newcommand{\enc}[1]{\langle #1 \rangle}
+
+\renewcommand{\Pr}{\mathrm{\textbf{Pr}}}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
