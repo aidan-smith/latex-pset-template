@@ -5,9 +5,7 @@
 \LoadClass[11pt, a4paper]{article}
 
 \RequirePackage[margin=0.75in]{geometry}
-\RequirePackage{fancyhdr}
 \RequirePackage{enumitem}
-\RequirePackage{tabularx}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{fontawesome}
 \RequirePackage{changepage}
@@ -26,7 +24,7 @@
 
 % Title
 \renewcommand{\maketitle}{%
-    \thispagestyle{plain}
+    \thispagestyle{empty}
     \begin{center}
         {\Huge\textbf{\name}} \\
         \vspace{1em}
