@@ -1,2 +1,2 @@
 # Aidan's LaTeX Templates
-LaTeX classes and templates designed for math problem sets.
+LaTeX classes and templates designed for math problem sets and resumes.

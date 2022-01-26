@@ -4,62 +4,76 @@
 
 \LoadClass[10pt, a4paper]{article}
 
-\RequirePackage[margin=1in]{geometry}
+\RequirePackage[T1]{fontenc}
+\RequirePackage[margin=0.75in]{geometry}
 \RequirePackage{fancyhdr}
+\RequirePackage{enumitem}
+\RequirePackage{tabularx}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{fontawesome}
 
 % Page and Font Styling
 
 % Contact Information
-\newcommand{\name}{Aidan Smith}
-\newcommand{\phone}{(412)-701-8365}
-\newcommand{\email}{aidan5525@gmail.com}
-\newcommand{\website}{aidansmith.me}
-\newcommand{\github}{github.com/aidan-smith}
-\newcommand{\linkedin}{linkedin.com/in/aidan-d-smith}
+\newcommand{\name}{John Doe}
+\newcommand{\phone}{(800)-800-8000}
+\newcommand{\email}{johndoe@gmail.com}
+\newcommand{\website}{johndoe.com}
+\newcommand{\github}{john-doe}
+\newcommand{\linkedin}{john-doe}
 
 % Title
-\renewcommand{\maketitle{%
+\renewcommand{\maketitle}{%
     \thispagestyle{plain}
     \begin{center}
         {\Huge\textbf{\name}} \\
-        \phone | \email | \github | \linkedin
+        \vspace{1em}
+        \raisebox{-0.1\height}\faPhone\ \href{tel:\phone}{\phone}
+        \hspace{1em}
+        \raisebox{-0.1\height}\faEnvelope\ \href{mailto:\email}{\email}
+        \hspace{1em}
+        \raisebox{-0.1\height}\faGlobe\ \href{https://\website/}{\website}
+        \hspace{1em}
+        \raisebox{-0.1\height}\faGithub\ \href{https://github.com/\github/}{\github}
+        \hspace{1em}
+        \raisebox{-0.1\height}\faLinkedinSquare\
+        \href{https://linkedin.com/in/\linkedin/}{\linkedin}
     \end{center}
-    \vspace{1em}
+    \vspace{0.5em}
 }
 
 % Section
 \providecommand{\section}{}
 \renewcommand{\section}[1]{%
+    \vspace{1em}
     \noindent{\large\textbf{#1}}
-    \vspace{0.25em}
-    \hrule
     \vspace{0.5em}
+    \hrule
+    \vspace{1em}
 }
 
 % Education
 \providecommand{\education}{}{}{}
-\renewcommand{\education}{[3]{%
-    \textbf{#1} \hspace{1em} \textit{#2} \hspace*{\fill} #3
+\renewcommand{\education}[3]{%
+    \indent{\textbf{#1} \hspace{0.25em} \textit{#2} \hfill #3}
     \vspace{0.25em}
 }
 
 % Job
 \providecommand{\job}{}{}{}{}
 \renewcommand{\job}[4]{%
-    \textbf{#1} \hspace{1em} \textit{#3} \hspace*{\fill} #4 \\
-    \textit{#2}
-    \vspace{0.25em}
+    \indent{\textbf{#1} \hspace{0.25em} \textit{#3} \hfill #4} \\
+    \indent{#2}
 }
 
 % Project
 \providecommand{\project}{}{}
 \renewcommand{\project}[2]{%
-    \textbf{#1} \hspace*{\fill} #2
-    \vspace{0.25em}
+    \indent{\textbf{#1} \hfill #2}
 }
 
 % Skill
 \providecommand{\skill}{}{}
 \renewcommand{\skill}[2]{%
-    \textbf{#1} \hspace{1em} #2
+    \indent{\textbf{#1} \hspace{1em} #2}
 }
