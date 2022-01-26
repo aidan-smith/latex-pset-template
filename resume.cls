@@ -79,5 +79,4 @@
     \begin{adjustwidth}{3em}{0em}
         #1
     \end{adjustwidth}
-    \vspace{0.5em}
 }
