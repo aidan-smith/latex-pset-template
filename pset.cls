@@ -128,7 +128,10 @@
 \newcommand{\abs}[1]{\lvert #1 \rvert}
 \newcommand{\enc}[1]{\langle #1 \rangle}
 
-\renewcommand{\Pr}{\mathrm{\textbf{Pr}}}
+\renewcommand{\Pr}[1]{\mathbf{P}\{#1\}}
+\newcommand{\Ev}[1]{\mathbf{E}[#1]}
+
+
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
