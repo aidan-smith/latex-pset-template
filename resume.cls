@@ -39,6 +39,7 @@
         \raisebox{-0.1\height}\faLinkedinSquare\
         \href{https://linkedin.com/in/\linkedin/}{\linkedin}
     \end{center}
+    \vspace{-0em}
 }
 
 % Section
@@ -52,7 +53,7 @@
 }
 
 % Job
-\providecommand{\job}{}{}{}{}
+\providecommand{\job}{}
 \renewcommand{\job}[4]{%
     \indent{\textbf{#1} \hspace{0.25em} \textit{#3} \hfill #4} \\
     \indent{#2}
@@ -60,7 +61,7 @@
 }
 
 % Activity
-\providecommand{\activity}{}{}
+\providecommand{\activity}{}
 \renewcommand{\activity}[2]{%
     \indent{\textbf{#1} \hfill #2}
     \vspace{0.5em}
