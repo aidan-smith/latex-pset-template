@@ -55,8 +55,8 @@
 % Education
 \providecommand{\education}{}
 \renewcommand{\education}[5]{%
-    \indent{\textbf{#1} \hspace{0.25em} \textit{#3} \hfill #4} \\
-    \indent{#2 \hfill #5}
+    \indent{\textbf{#1} \hspace{0.25em} \textit{#4} \hfill #5} \\
+    \indent{#2 \hfill #3}
     \vspace{0.5em}
 }
 
