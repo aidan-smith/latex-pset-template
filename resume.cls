@@ -37,7 +37,7 @@
         \raisebox{-0.1\height}\faGithub\ \href{https://github.com/\github/}{\github}
         \hspace{1em}
         \raisebox{-0.1\height}\faLinkedinSquare\
-        \href{https://linkedin.com/in/\linkedin/}{\linkedin}
+        \href{https://www.linkedin.com/in/\linkedin/}{\linkedin}
     \end{center}
     \vspace{-0em}
 }
