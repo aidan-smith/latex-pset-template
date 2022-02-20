@@ -52,6 +52,14 @@
     \vspace{1em}
 }
 
+% Education
+\providecommand{\education}{}
+\renewcommand{\education}[5]{%
+    \indent{\textbf{#1} \hspace{0.25em} \textit{#3} \hfill #4} \\
+    \indent{#2 \hfill #5}
+    \vspace{0.5em}
+}
+
 % Job
 \providecommand{\job}{}
 \renewcommand{\job}[4]{%
