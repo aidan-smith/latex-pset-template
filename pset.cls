@@ -70,14 +70,13 @@
     \vspace{1em}
 }
 
-% Problem Header
+% Problem Headers
 \newcounter{problem}
-\newcounter{partcount}
 
+% Generic Problem
 \providecommand{\problem}{}
 \renewcommand{\problem}[0]{%
     \stepcounter{problem}
-    \setcounter{partcount}{0}
     \ifthenelse{\value{problem}=1}{}{%
         \ifthenelse{\@opnewpage=1}{\clearpage}{\vspace{1em}}
     }
@@ -87,10 +86,10 @@
     \vspace{0.75em}
 }
 
+% Named Problem
 \WithSuffix\providecommand\problem*{}
 \WithSuffix\renewcommand\problem*[1]{%
     \stepcounter{problem}
-    \setcounter{partcount}{0}
     \ifthenelse{\value{problem}=1}{}{%
         \ifthenelse{\@opnewpage=1}{\clearpage}{\vspace{1em}}
     }
@@ -98,12 +97,6 @@
     \vspace{0.5em}
     \hrule
     \vspace{0.75em}
-}
-
-\providecommand{\part}{}
-\renewcommand{\part}{%
-    \stepcounter{partcount}
-    \textbf{\arabic{problem}.\arabic{partcount}}
 }
 
 % Induction Macros
@@ -125,20 +118,19 @@
 \newtheorem*{claim}{Claim}
 \newtheorem*{cor}{Corollary}
 
-\newcommand{\abs}[1]{\lvert #1 \rvert}
-\newcommand{\enc}[1]{\langle #1 \rangle}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\enc}[1]{\left\langle #1 \right\rangle}
 
-\renewcommand{\Pr}[1]{\mathbf{P}\{#1\}}
-\newcommand{\Ev}[1]{\mathbf{E}[#1]}
-
-
+\renewcommand{\P}[1]{\mathbf{P}\left\{#1\right\}}
+\newcommand{\E}[1]{\mathbf{E}\left[#1\right]}
+\newcommand{\Var}[1]{\mathbf{Var}\left(#1\right)}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
-\newcommand{\F}{\mathbb{F}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
 
 \newcommand{\J}{\mathcal{J}}
 \newcommand{\G}{\mathcal{G}}
