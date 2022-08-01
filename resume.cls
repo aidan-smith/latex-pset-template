@@ -4,11 +4,12 @@
 
 \LoadClass[11pt, a4paper]{article}
 
-\RequirePackage[margin=0.75in]{geometry}
+\RequirePackage[margin=0.5in]{geometry}
 \RequirePackage{enumitem}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{fontawesome}
 \RequirePackage{changepage}
+\RequirePackage{xstring}
 
 % Styling
 \setlist[itemize]{noitemsep, nosep}
@@ -16,7 +17,7 @@
 
 % Contact Information
 \newcommand{\name}{John Doe}
-\newcommand{\phone}{(800)-800-8000}
+\newcommand{\phone}{8008008000}
 \newcommand{\email}{johndoe@gmail.com}
 \newcommand{\website}{johndoe.com}
 \newcommand{\github}{john-doe}
@@ -28,7 +29,8 @@
     \begin{center}
         {\Huge\textbf{\name}} \\
         \vspace{1em}
-        \raisebox{-0.1\height}\faPhone\ \href{tel:\phone}{\phone}
+        \raisebox{-0.1\height}\faPhone\ \href{tel:\phone}
+        {(\StrLeft{\phone}{3})\:\StrMid{\phone}{4}{6}\,-\,\StrRight{\phone}{4}}
         \hspace{1em}
         \raisebox{-0.1\height}\faEnvelope\ \href{mailto:\email}{\email}
         \hspace{1em}
@@ -39,7 +41,7 @@
         \raisebox{-0.1\height}\faLinkedinSquare\
         \href{https://www.linkedin.com/in/\linkedin/}{\linkedin}
     \end{center}
-    \vspace{-0em}
+    \vspace{-0.5em}
 }
 
 % Section

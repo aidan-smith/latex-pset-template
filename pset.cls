@@ -124,6 +124,7 @@
 \renewcommand{\P}[1]{\mathbf{P}\left\{#1\right\}}
 \newcommand{\E}[1]{\mathbf{E}\left[#1\right]}
 \newcommand{\Var}[1]{\mathbf{Var}\left(#1\right)}
+\newcommand{\Cov}[2]{\mathbf{Cov}\left(#1, #2\right)}
 
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
