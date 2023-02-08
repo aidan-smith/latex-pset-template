@@ -121,20 +121,27 @@
 \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
 \newcommand{\enc}[1]{\left\langle #1 \right\rangle}
 
-\renewcommand{\P}[1]{\mathbf{P}\left\{#1\right\}}
-\newcommand{\E}[1]{\mathbf{E}\left[#1\right]}
+\renewcommand{\Pr}[1]{\mathbf{P}\left\{#1\right\}}
+\newcommand{\Ev}[1]{\mathbf{E}\left[#1\right]}
 \newcommand{\Var}[1]{\mathbf{Var}\left(#1\right)}
 \newcommand{\Cov}[2]{\mathbf{Cov}\left(#1, #2\right)}
 
+\newcommand{\TIME}[1]{\mathrm{TIME}\left(#1\right)}
+\newcommand{\SPACE}[1]{\mathrm{SPACE}\left(#1\right)}
+
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
-\newcommand{\R}{\mathbb{R}}
 \newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\F}{\mathbb{F}}
 
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\NP}{\mathbb{NP}}
+
 \newcommand{\J}{\mathcal{J}}
 \newcommand{\G}{\mathcal{G}}
+\newcommand{\M}{\mathcal{M}}
 
 \newcommand{\ba}{\mathbf{a}}
 \newcommand{\bb}{\mathbf{b}}
